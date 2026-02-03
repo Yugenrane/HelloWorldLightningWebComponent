@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Looping and Iteration">
+        <h1>This is for each in LWC</h1>
+        <template for:each={cityList} for:item="city">
+            <p key={city}>{city}</p>
+        </template>
+<br><br><br>    
+        <h1>Example of Iterator in LWC</h1>
+        <template iterator:name={cityList}>
+            <p key={name.value}>{name.value}</p>
+        </template>
+    </lightning-card>
+</template>

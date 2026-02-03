@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Assignment"><lightning-input label="Enter here"
+            onchange={handleClick}></lightning-input></lightning-card>
+        <!-- <template if:true={flag}>
+            <div>Flag is true thats why you are seeing me</div>
+        </template></lightning-card> -->
+
+    <lightning-card>
+        <template lwc:if={isMorning}>
+            <P>Good Morning India</P>
+        </template>
+        <template lwc:elseif={isAfternoon}>
+            <P>Good Afternoon India</P>
+        </template>
+        <template lwc:else>
+            <P>Good Evening India</P>
+        </template>
+    </lightning-card>
+</template>

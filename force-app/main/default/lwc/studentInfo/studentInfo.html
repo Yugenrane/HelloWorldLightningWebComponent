@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Student information">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                <ul>
+                    <template for:each={studentInfoParent} for:item="student">
+                        <li key={student.rollNumber}>
+                            <c-std-info student-info={student} onstudentselect={handleStudentSelect}></c-std-info>
+                        </li>
+                    </template>
+                </ul>
+            </lightning-layout-item>
+        <lightning-layout-item size="4">
+            You have selected = Name : {selectedStudentInfo.name}
+                                Age : {selectedStudentInfo.age}
+                                Roll Number : {selectedStudentInfo.rollNumber}
+        </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
